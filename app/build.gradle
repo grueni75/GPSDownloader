@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "org.mg.gpsdownloader"
+        minSdkVersion 10
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 23
+        versionCode 9
+        versionName "1.8"
+        multiDexEnabled false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:23.3.0'
+    implementation 'com.github.ma1co.OpenMemories-Framework:framework:-SNAPSHOT'
+    // If you need direct access to the Sony APIs, you can add this line, too:
+    compileOnly 'com.github.ma1co.OpenMemories-Framework:stubs:-SNAPSHOT'
+    /*implementation('com.google.api-client:google-api-client-android:1.20.0') {
+        exclude module: 'httpclient'
+    }
+    implementation('com.google.http-client:google-http-client-gson:1.20.0') {
+        exclude module: 'httpclient'
+    }*/
+    //implementation 'com.squareup.okhttp3:okhttp:3.12.13'
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+}
+
+repositories {
+    jcenter()
+    maven { url "http://maven.burtsev.net" }
+    maven { url "https://jitpack.io" }
+}

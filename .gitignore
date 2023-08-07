@@ -1,0 +1,11 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/**
+.DS_Store
+/build
+/captures
+*.apk
+app/src/main/java/org/bostwickenator/googlephotos/AuthCreds.java
+app/release/**
