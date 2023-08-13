@@ -32,8 +32,6 @@ public class WifiSetupActivity extends Activity {
         setContentView(R.layout.activity_wifi_setup);
         res = getResources();
 
-        AppInit.initApp();
-
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 

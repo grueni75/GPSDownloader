@@ -55,7 +55,6 @@ public final class InternalSSLSocketFactory extends SSLSocketFactory {
    }
 
    private Socket enableTLSOnSocket(Socket socket) {
-      //if(socket instanceof SSLSocket) ((SSLSocket) socket).setEnabledProtocols(new String[] {"TLSv1", "TLSv1.1", "TLSv1.2", "TLSv1.3"});
       if(socket instanceof SSLSocket) ((SSLSocket) socket).setEnabledProtocols(new String[] {"TLSv1.2", "TLSv1.3"});
       return socket;
    }
